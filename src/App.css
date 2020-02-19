@@ -1,38 +1,69 @@
-.App {
+html {
+  background: url(background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.App{
   text-align: center;
+/*  background-image: url(background.jpg) */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App h1{
+  margin: 0;
+  padding-top: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.gameContainer{
+  border: 1px solid black;
+  width: 550px;
+  height: 465px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  margin: auto;
+  margin-bottom: 100px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #0086cf;
+  z-index: 1;
+}
+
+.cell{
+  width: 65px;
+  height: 65px;
+  border: 1px solid black;
+  border-radius: 50%;
+  margin: 5px;
+  cursor: pointer;
+  box-sizing: border-box;
+  background-color: #ecececed;
+  transition: ease 0.7s;
+}
+
+.newGame{
+  margin: 10px;
+  background-color: #0086cf;
+  border: none;
+  border-radius: 50%;
   color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  cursor: pointer;
+  -webkit-box-shadow: 10px 10px 14px 1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 14px 1px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 14px 1px rgba(0,0,0,0.75);
 }
 
-.App-link {
-  color: #61dafb;
+.playerCell-enter{
+  opacity: 0;
+  transform: translateY(-1000px);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.playerCell-enter-active{
+  opacity: 1;
+  transform: translateY(0);
 }
